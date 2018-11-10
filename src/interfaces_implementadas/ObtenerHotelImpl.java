@@ -2,6 +2,7 @@ package interfaces_implementadas;
 
 import controlador.Conexion;
 import interfaces.ObtenerHotel;
+import interfaces.ObtenerHotel;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Connection;

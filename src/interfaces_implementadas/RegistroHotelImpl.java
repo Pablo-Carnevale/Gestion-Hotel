@@ -2,6 +2,7 @@ package interfaces_implementadas;
 
 import controlador.Conexion;
 import interfaces.RegistroHotel;
+import interfaces.RegistroHotel;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;

@@ -10,12 +10,12 @@ package vista;
  *
  * @author Pablo
  */
-public class LoginHotel_ALTERNATIVO extends javax.swing.JFrame {
+public class LoginHotel extends javax.swing.JFrame {
 
     /**
      * Creates new form LoginHotel
      */
-    public LoginHotel_ALTERNATIVO() {
+    public LoginHotel() {
         initComponents();
     }
 

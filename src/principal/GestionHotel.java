@@ -1,5 +1,5 @@
 
-package gestionhotel;
+package principal;
 
 public class GestionHotel {
 

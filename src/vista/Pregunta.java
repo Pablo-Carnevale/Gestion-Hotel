@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package vista;
 
 /**
@@ -28,15 +24,14 @@ public class Pregunta extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btn_no = new javax.swing.JButton();
+        btn_si = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Bienvenido");
-        setPreferredSize(new java.awt.Dimension(670, 390));
         setResizable(false);
         getContentPane().setLayout(null);
 
@@ -52,23 +47,23 @@ public class Pregunta extends javax.swing.JFrame {
         jPanel1.add(jLabel4);
         jLabel4.setBounds(70, 30, 330, 40);
 
-        jButton1.setText("No");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btn_no.setText("No");
+        btn_no.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btn_noActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1);
-        jButton1.setBounds(240, 110, 100, 30);
+        jPanel1.add(btn_no);
+        btn_no.setBounds(240, 110, 100, 30);
 
-        jButton2.setText("Si");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btn_si.setText("Si");
+        btn_si.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btn_siActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2);
-        jButton2.setBounds(120, 110, 100, 30);
+        jPanel1.add(btn_si);
+        btn_si.setBounds(120, 110, 100, 30);
 
         jPanel2.add(jPanel1);
         jPanel1.setBounds(110, 100, 460, 180);
@@ -94,14 +89,16 @@ public class Pregunta extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btn_noActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_noActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btn_noActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btn_siActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_siActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btn_siActionPerformed
 
+    
+    
 //    /**
 //     * @param args the command line arguments
 //     */
@@ -138,8 +135,8 @@ public class Pregunta extends javax.swing.JFrame {
 //    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton jButton1;
-    public javax.swing.JButton jButton2;
+    public javax.swing.JButton btn_no;
+    public javax.swing.JButton btn_si;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
