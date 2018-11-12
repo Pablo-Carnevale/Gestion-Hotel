@@ -31,12 +31,21 @@ public class CtrlSetupHotel implements ActionListener {
         frm.setVisible(true);        
     }
     
-    //Metodo para settear info del usuario a los set de hotel
+    //Metodo para settear info del usuario a los set de hotel, también settea el array de habitaciones por piso
     private void setHotel(){
         hotel.setNombre(frm.txt_nombre.getText());
         hotel.setCantidad_pisos(Integer.parseInt(frm.txt_pisos.getText()));
+        this.obtenerHabPiso(hotel.getHabitaciones_por_piso()); 
     }
     
+    private void obtenerHabPiso(int[] hab_piso){
+        hab_piso = new int [Integer.parseInt(frm.txt_pisos.getText())]; 
+        for(int i=0; i<hab_piso.length; i++){
+            hab_piso[i] = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el número"
+            + "de habitaciones del piso "+(i+1)));
+        }
+        hotel.setHabitaciones_por_piso(hab_piso); 
+    }
     
     //Metodo para devolver el nombre del hotel al JLabel del frame de pasajeros-habitaciones
     public String getNombreHotel(){
@@ -54,6 +63,8 @@ public class CtrlSetupHotel implements ActionListener {
             this.setHotel();
             if(hotel_impl.registrarHotel(hotel)){
                 JOptionPane.showMessageDialog(null, "Hotel registrado con éxito! Pulse aceptar para seguír adelante");
+                frm.setVisible(false);
+                
                 /*Una vez que el codigo pasa por acá, se abre el frame que contiene el JMenuItem de habitaciones y pasajeros*/
             }else{
                 JOptionPane.showMessageDialog(null, "Error al registrar Hotel");
