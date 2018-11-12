@@ -38,6 +38,7 @@ public class CtrlSetupHotel implements ActionListener {
         this.obtenerHabPiso(hotel.getHabitaciones_por_piso()); 
     }
     
+    /*Este es el metodo que pregunta al usuario sobre la cantidad de habitaciones que va a ver por piso (se llama en setHotel para cargarlo)*/
     private void obtenerHabPiso(int[] hab_piso){
         hab_piso = new int [Integer.parseInt(frm.txt_pisos.getText())]; 
         for(int i=0; i<hab_piso.length; i++){
