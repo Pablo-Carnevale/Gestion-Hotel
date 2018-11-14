@@ -8,6 +8,9 @@
 
 package vista;
 
+import java.awt.Component;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Pablo
@@ -95,9 +98,15 @@ public class Dashboard_PROTOTIPO extends javax.swing.JFrame {
 
         Texto_boton.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         Texto_boton.setForeground(new java.awt.Color(255, 255, 255));
+        Texto_boton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Texto_boton.setText("TEXTO1");
+        Texto_boton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Texto_botonMouseClicked(evt);
+            }
+        });
         boton1.add(Texto_boton);
-        Texto_boton.setBounds(70, 10, 60, 40);
+        Texto_boton.setBounds(10, 0, 190, 60);
 
         sidepanel.add(boton1);
         boton1.setBounds(0, 120, 200, 60);
@@ -125,9 +134,15 @@ public class Dashboard_PROTOTIPO extends javax.swing.JFrame {
 
         Texto_boton2.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         Texto_boton2.setForeground(new java.awt.Color(255, 255, 255));
+        Texto_boton2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Texto_boton2.setText("TEXTO2");
+        Texto_boton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Texto_boton2MouseClicked(evt);
+            }
+        });
         boton2.add(Texto_boton2);
-        Texto_boton2.setBounds(70, 10, 60, 40);
+        Texto_boton2.setBounds(10, 0, 190, 60);
 
         sidepanel.add(boton2);
         boton2.setBounds(0, 190, 200, 60);
@@ -155,9 +170,15 @@ public class Dashboard_PROTOTIPO extends javax.swing.JFrame {
 
         Texto_boton3.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         Texto_boton3.setForeground(new java.awt.Color(255, 255, 255));
+        Texto_boton3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Texto_boton3.setText("TEXTO3");
+        Texto_boton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Texto_boton3MouseClicked(evt);
+            }
+        });
         boton3.add(Texto_boton3);
-        Texto_boton3.setBounds(70, 10, 60, 40);
+        Texto_boton3.setBounds(10, 0, 190, 60);
 
         sidepanel.add(boton3);
         boton3.setBounds(0, 260, 200, 60);
@@ -178,6 +199,36 @@ public class Dashboard_PROTOTIPO extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Texto_botonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Texto_botonMouseClicked
+      
+        //NOTESE QUE ESTE EVENTO HACE QUE FUNCIONEN LOS "BOTONES"---------------------------------------------
+        
+        Component frame = null;
+      
+        JOptionPane.showMessageDialog(frame, "Estas haciendo click en un boton");
+
+        
+    }//GEN-LAST:event_Texto_botonMouseClicked
+
+    private void Texto_boton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Texto_boton2MouseClicked
+
+
+
+
+
+
+    }//GEN-LAST:event_Texto_boton2MouseClicked
+
+    private void Texto_boton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Texto_boton3MouseClicked
+
+        
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_Texto_boton3MouseClicked
 
     /**
      * @param args the command line arguments

@@ -38,6 +38,8 @@ public class LoginHotel extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -77,17 +79,19 @@ public class LoginHotel extends javax.swing.JFrame {
         jTextField2.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         jTextField2.setForeground(new java.awt.Color(204, 204, 204));
         jTextField2.setText("Usuario");
+        jTextField2.setBorder(null);
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
             }
         });
         jPanel2.add(jTextField2);
-        jTextField2.setBounds(90, 140, 320, 52);
+        jTextField2.setBounds(90, 140, 320, 40);
 
         jTextField3.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         jTextField3.setForeground(new java.awt.Color(204, 204, 204));
         jTextField3.setText("Password");
+        jTextField3.setBorder(null);
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField3ActionPerformed(evt);
@@ -122,6 +126,42 @@ public class LoginHotel extends javax.swing.JFrame {
         jLabel5.setText("jLabel5");
         jPanel2.add(jLabel5);
         jLabel5.setBounds(30, 208, 50, 52);
+
+        jPanel3.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel3.setMinimumSize(new java.awt.Dimension(150, 10));
+        jPanel3.setPreferredSize(new java.awt.Dimension(320, 8));
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 320, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 10, Short.MAX_VALUE)
+        );
+
+        jPanel2.add(jPanel3);
+        jPanel3.setBounds(90, 180, 320, 10);
+
+        jPanel4.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel4.setMinimumSize(new java.awt.Dimension(150, 10));
+        jPanel4.setPreferredSize(new java.awt.Dimension(320, 8));
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 320, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 10, Short.MAX_VALUE)
+        );
+
+        jPanel2.add(jPanel4);
+        jPanel4.setBounds(90, 260, 320, 10);
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(180, 90, 450, 419);
@@ -220,6 +260,8 @@ public class LoginHotel extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     public javax.swing.JTextField jTextField2;
     public javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
