@@ -8,19 +8,22 @@
 
 package vista;
 
+import java.awt.Color;
 import java.awt.Component;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 /**
  *
  * @author Pablo
  */
-public class Dashboard_PROTOTIPO extends javax.swing.JFrame {
+public class Dashboard extends javax.swing.JFrame {
 
     /**
      * Creates new form Dashboard_PROTOTIPO
      */
-    public Dashboard_PROTOTIPO() {
+    public Dashboard() {
         initComponents();
     }
 
@@ -101,8 +104,8 @@ public class Dashboard_PROTOTIPO extends javax.swing.JFrame {
         Texto_boton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Texto_boton.setText("TEXTO1");
         Texto_boton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                Texto_botonMouseClicked(evt);
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                Texto_botonMousePressed(evt);
             }
         });
         boton1.add(Texto_boton);
@@ -137,8 +140,8 @@ public class Dashboard_PROTOTIPO extends javax.swing.JFrame {
         Texto_boton2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Texto_boton2.setText("TEXTO2");
         Texto_boton2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                Texto_boton2MouseClicked(evt);
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                Texto_botonMousePressed(evt);
             }
         });
         boton2.add(Texto_boton2);
@@ -173,8 +176,8 @@ public class Dashboard_PROTOTIPO extends javax.swing.JFrame {
         Texto_boton3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Texto_boton3.setText("TEXTO3");
         Texto_boton3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                Texto_boton3MouseClicked(evt);
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                Texto_botonMousePressed(evt);
             }
         });
         boton3.add(Texto_boton3);
@@ -195,41 +198,37 @@ public class Dashboard_PROTOTIPO extends javax.swing.JFrame {
         jLabel4.setBounds(400, 0, 400, 90);
 
         getContentPane().add(padre);
-        padre.setBounds(0, 0, 1130, 798);
+        padre.setBounds(0, 0, 1130, 800);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Texto_botonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Texto_botonMouseClicked
-      
-        //NOTESE QUE ESTE EVENTO HACE QUE FUNCIONEN LOS "BOTONES"---------------------------------------------
-        
+    private void Texto_botonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Texto_botonMousePressed
+     
         Component frame = null;
-      
         JOptionPane.showMessageDialog(frame, "Estas haciendo click en un boton");
 
+        setColor(boton1);
         
-    }//GEN-LAST:event_Texto_botonMouseClicked
+    }//GEN-LAST:event_Texto_botonMousePressed
 
-    private void Texto_boton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Texto_boton2MouseClicked
+/////////////////////////////////////////////////////////////////////////////////
 
-
-
-
-
-
-    }//GEN-LAST:event_Texto_boton2MouseClicked
-
-    private void Texto_boton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Texto_boton3MouseClicked
-
-        
-        
-        
-        
-        
-        
-    }//GEN-LAST:event_Texto_boton3MouseClicked
-
+    // Esto pone y resetea el color a los indicadores!! 
+    
+    
+    void setColor(JPanel panel){
+        panel.setBackground(new Color(0,204,255));
+    }
+    
+    void resetColor(JPanel panel){
+       panel.setBackground(new Color(255,255,255));
+    }
+    
+    
+    // Fin de set and reset indicadores!
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -247,20 +246,21 @@ public class Dashboard_PROTOTIPO extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Dashboard_PROTOTIPO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Dashboard_PROTOTIPO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Dashboard_PROTOTIPO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Dashboard_PROTOTIPO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Dashboard_PROTOTIPO().setVisible(true);
+                new Dashboard().setVisible(true);
             }
         });
     }
@@ -284,4 +284,8 @@ public class Dashboard_PROTOTIPO extends javax.swing.JFrame {
     private javax.swing.JPanel padre;
     private javax.swing.JPanel sidepanel;
     // End of variables declaration//GEN-END:variables
+
+    private void setColor(JLabel Texto_boton) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
