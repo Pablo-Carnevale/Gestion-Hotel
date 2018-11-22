@@ -140,6 +140,9 @@ public class Dashboard extends javax.swing.JFrame {
         Texto_boton2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Texto_boton2.setText("TEXTO2");
         Texto_boton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Texto_boton2MouseClicked(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 Texto_botonMousePressed(evt);
             }
@@ -207,20 +210,37 @@ public class Dashboard extends javax.swing.JFrame {
      
         Component frame = null;
         JOptionPane.showMessageDialog(frame, "Estas haciendo click en un boton");
-
-        setColor(boton1);
+        
+        boolean Texto_botonMousePressed=true;
+        resetColor(boton_status);
+        while (Texto_botonMousePressed) {
+            setColor(boton_status);
+        }   
+        
+        
         
     }//GEN-LAST:event_Texto_botonMousePressed
+
+    private void Texto_boton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Texto_boton2MouseClicked
+        
+        boolean Texto_boton2MouseClicked = true;
+        
+        if (Texto_boton2MouseClicked(true)){
+            
+        }
+        
+        
+    }//GEN-LAST:event_Texto_boton2MouseClicked
 
 /////////////////////////////////////////////////////////////////////////////////
 
     // Esto pone y resetea el color a los indicadores!! 
     
-    
+    //encendido
     void setColor(JPanel panel){
         panel.setBackground(new Color(0,204,255));
     }
-    
+    //apagado
     void resetColor(JPanel panel){
        panel.setBackground(new Color(255,255,255));
     }

@@ -226,6 +226,7 @@
                     <Property name="text" type="java.lang.String" value="TEXTO2"/>
                   </Properties>
                   <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Texto_boton2MouseClicked"/>
                     <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Texto_botonMousePressed"/>
                   </Events>
                   <Constraints>
