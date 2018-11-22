@@ -225,8 +225,13 @@ public class Dashboard extends javax.swing.JFrame {
         
         boolean Texto_boton2MouseClicked = true;
         
-        if (Texto_boton2MouseClicked(true)){
+        if (Texto_boton2MouseClicked){
+            resetColor(boton_status);
+        } else {
             
+            if (Texto_boton2MouseClicked){
+                setColor(boton_status2);
+            }
         }
         
         
